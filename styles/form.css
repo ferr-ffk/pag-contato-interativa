@@ -1,0 +1,65 @@
+form {
+  padding-inline: 1.75rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+form .input-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+
+  margin-block: 0.325rem;
+}
+
+form .input-container div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Define o mesmo tamanho para todos as tags dentro de uma div contendo a label e o input */
+form .input-container > * {
+  flex: 1;
+}
+
+input,
+textarea {
+  background-color: transparent;
+
+  padding: 0.625rem 0.925rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--cor-texto-claro);
+  border-radius: var(--borda-acentuada);
+
+  resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  font-family: "Plus Jakarta Sans", system-ui;
+  font-size: 0.9rem;
+  color: currentColor;
+
+  text-transform: capitalize;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 700;
+
+  margin-bottom: 0.225rem;
+}
+
+input:not(:placeholder-shown) {
+  border-color: rgb(255, 149, 149);
+}
+
+input:valid {
+  border-color: rgb(0, 126, 0);
+}

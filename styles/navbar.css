@@ -1,0 +1,123 @@
+.navbar {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+
+  width: 95%;
+  margin-inline: auto;
+
+  --borda: 1.5rem;
+
+  border-bottom-left-radius: var(--borda);
+  border-bottom-right-radius: var(--borda);
+
+  padding: 1.325rem 2.325rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contato {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.links, .contato {
+  display: none;
+}
+
+.links-lateral {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.botao-menu {
+  border: none;
+  background-color: none;
+
+  cursor: pointer;
+}
+
+#menu-lateral {
+  position: fixed;
+  width: 50dvw;
+
+  top: 0;
+  bottom: 0;
+  right: 0;
+
+  padding: 1.325rem;
+
+  background-color: var(--cor-bg);
+
+  border-left: 1px solid var(--cor-texto);
+
+  z-index: 1;
+
+  right: 0;
+  display: none;
+}
+
+#menu-lateral .logo {
+  padding-right: 1.5rem;
+
+  border-right: 3px solid currentColor;
+}
+
+#menu-lateral:target {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@media (width > 900px) {
+  .links,
+  .contato {
+    display: flex;
+  }
+
+  .botao-menu,
+  #menu-lateral {
+    display: none !important;
+  }
+}
+
+.link:hover {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 100%;
+
+    content: "";
+
+    height: 2px;
+    background-color: currentColor;
+
+    width: 100%;
+
+    animation: link_border 100ms linear;
+  }
+}
+
+@keyframes link_border {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
