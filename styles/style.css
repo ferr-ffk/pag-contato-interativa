@@ -25,14 +25,16 @@
 
 html {
   background-color: var(--cor-bg);
+  overflow-x: hidden;
 }
 
 body {
   font-family: "Plus Jakarta Sans", system-ui;
 }
 
-html {
-  overflow-x: hidden;
+html,
+body {
+  width: 100dvw;
 }
 
 a {
@@ -174,7 +176,7 @@ span.claro {
 }
 
 .container-conteudo {
-  max-width: 100dvw;
+  max-width: 100dvw !important;
   padding: 2.5rem;
 }
 

@@ -8,15 +8,24 @@ form {
 
 form .input-container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
 
   margin-block: 0.325rem;
+  max-width: 100%;
+}
+
+@media screen and (width > 600px) {
+  .input-container {
+    flex-direction: row !important;
+  }
 }
 
 form .input-container div {
   display: flex;
   flex-direction: column;
+  max-width: 100dvw;
 }
 
 /* Define o mesmo tamanho para todos as tags dentro de uma div contendo a label e o input */
