@@ -200,12 +200,23 @@ span.claro {
 
 .layout-vertical ul {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+@media screen and (width > 600px) {
+  .layout-vertical ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .layout-vertical ul li {
+    align-items: center;
+  }
 }
 
 .layout-vertical ul li {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   gap: 0.125rem;
 }
