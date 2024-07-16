@@ -19,6 +19,7 @@
   border-bottom-right-radius: var(--borda);
 
   padding: 1.325rem 2.325rem;
+  height: var(--altura-navbar);
 }
 
 .links {
