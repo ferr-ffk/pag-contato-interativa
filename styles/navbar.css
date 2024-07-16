@@ -13,6 +13,7 @@
   padding: 1.325rem 2.325rem;
   height: var(--altura-navbar);
 
+  /* Adiciona a borda arredondada quando o usuário desce a página */
   animation: adicionar-borda linear both;
   animation-timeline: scroll();
   animation-range: 0dvh 10dvh;
@@ -61,6 +62,8 @@
   cursor: pointer;
 }
 
+/* Para o menu lateral, é utilizado uma div com display: none, porém quando o fragmento da página é o id do menu (ou seja ela está selecionada), ela se torna vísivel com
+    display: flex */
 #menu-lateral {
   position: fixed;
   width: 50dvw;
@@ -108,6 +111,7 @@
 .link:hover {
   position: relative;
 
+  /* Adiciona a borda para que quando o link está no modo hover será ativada a animação para ela */
   &::before {
     position: absolute;
     top: 100%;
@@ -119,11 +123,11 @@
 
     width: 100%;
 
-    animation: link_border 100ms linear;
+    animation: borda-deslizar 100ms linear;
   }
 }
 
-@keyframes link_border {
+@keyframes borda-deslizar {
   from {
     width: 0%;
   }
