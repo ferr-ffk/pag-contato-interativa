@@ -49,8 +49,15 @@ a {
   font-weight: bold;
 }
 
+/* Para que a navbar complete o main para deixar o tamanho total da tela */
 main {
   min-height: calc(100dvh - var(--altura-navbar));
+}
+
+main:has(.layout-centralizado) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {
@@ -193,9 +200,9 @@ span.claro {
   --tamanho: 25dvh;
 
   height: var(--tamanho);
-  width: var(--tamanho);  
+  width: var(--tamanho);
 
-  margin: auto;
+  margin-inline: auto;
 
   display: flex;
   flex-direction: column;
