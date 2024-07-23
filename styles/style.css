@@ -49,6 +49,10 @@ a {
   font-weight: bold;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 /* Para que a navbar complete o main para deixar o tamanho total da tela */
 main {
   min-height: calc(100dvh - var(--altura-navbar));
@@ -79,18 +83,16 @@ img {
 }
 
 .logo {
-  max-height: 100%;
-
   min-width: 3rem;
   max-width: 5rem;
 }
 
 .logo > a {
   transition: var(--tempo-transicao) all ease-in;
+}
 
-  &:hover {
-    color: var(--cor-destaque);
-  }
+.logo > a:hover {
+  color: var(--cor-destaque);
 }
 
 .botao {

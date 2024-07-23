@@ -12,11 +12,15 @@
 
   padding: 1.325rem 2.325rem;
   height: var(--altura-navbar);
+} 
 
-  /* Adiciona a borda arredondada quando o usuário desce a página */
-  animation: adicionar-borda linear both;
-  animation-timeline: scroll();
-  animation-range: 0dvh 10dvh;
+@supports (animation-timeline: scroll()) {
+  .navbar {
+    /* Adiciona a borda arredondada quando o usuário desce a página */
+    animation: adicionar-borda linear both;
+    animation-timeline: scroll();
+    animation-range: 0dvh 10dvh;
+  }
 }
 
 @keyframes adicionar-borda {
@@ -109,11 +113,12 @@
 }
 
 .link:hover {
-  position: relative;
+  position: relative; 
+}
 
-  /* Adiciona a borda para que quando o link está no modo hover será ativada a animação para ela */
-  &::before {
-    position: absolute;
+/* Adiciona a borda para que quando o link está no modo hover será ativada a animação para ela */
+.link:hover::before {
+  position: absolute;
     top: 100%;
 
     content: "";
@@ -124,7 +129,6 @@
     width: 100%;
 
     animation: borda-deslizar 100ms linear;
-  }
 }
 
 @keyframes borda-deslizar {
